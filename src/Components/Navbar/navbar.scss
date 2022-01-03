@@ -1,0 +1,85 @@
+@import '../../style/variables';
+.navbar-container {
+  width: 100%;
+  height: 65px;
+  background-color: $white-100;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  .open-menu,
+  .close-menu {
+    margin-left: 20px;
+    color: $sidebar-icon;
+    border: none;
+    background-color: transparent;
+    &:hover {
+      color: $sidebar-grey;
+      cursor: pointer;
+    }
+  }
+  .close-menu {
+    position: relative;
+    margin-left: 100px;
+    .close-menu-arrow {
+      position: absolute;
+      top: 4px;
+      left: -8px;
+      font-size: 20px;
+    }
+  }
+  &-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+    > button {
+      color: $sidebar-icon;
+      font-size: 20px;
+      width: 40px;
+      border: none;
+      background-color: transparent;
+      &:hover {
+        color: $sidebar-grey;
+        cursor: pointer;
+      }
+    }
+
+    > svg {
+      margin-left: 20px;
+      font-size: 24px;
+    }
+  }
+  .navbar-container-user {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    > .avatar {
+      font-size: 40px;
+      margin-right: 5px;
+    }
+    > h2 {
+      font-size: 18px;
+      margin: 0 10px;
+    }
+  }
+  .navbar-container-flag {
+    cursor: pointer;
+    height: 100%;
+    width: 28px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .navbar-container-left {
+    .close-menu {
+      margin-left: 50px !important;
+    }
+  }
+  .navbar-container-user {
+    > h2 {
+      display: none;
+    }
+  }
+}

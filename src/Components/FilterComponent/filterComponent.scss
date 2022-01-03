@@ -1,0 +1,92 @@
+@import '../../style/variables';
+
+.filter-container {
+  margin: 10px 40px 0px 0px;
+  padding: 8px;
+  border: 2px solid $green-border;
+  border-radius: 4px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  .select-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .select-option {
+    margin-top: 5px;
+    color: $grey-200;
+    > div {
+      margin-top: 2px;
+      min-width: 250px;
+    }
+  }
+  &-buttons {
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+    background-color: $white-200;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    > button {
+      padding: 8px;
+      border-radius: 4px;
+      background-color: transparent;
+    }
+    .apply-button {
+      border: 1px solid $blue-button;
+      color: $blue-button;
+      margin-right: 5px;
+      &:hover {
+        background-color: $blue-button;
+        color: $white-100;
+        cursor: pointer;
+      }
+    }
+    .cancel-button {
+      margin-right: 5px;
+      border: 1px solid $grey-100;
+      color: $grey-100;
+      &:hover {
+        background-color: $grey-100;
+        color: $white-100;
+        cursor: pointer;
+      }
+    }
+    .clear-button {
+      border: 1px solid $red-button;
+      color: $red-button;
+      &:hover {
+        background-color: $red-button;
+        color: $white-100;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .select-option {
+    width: 100%;
+    > div {
+      width: 100% !important;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .filter-container {
+    margin: 10px 0px 0px 0px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .filter-container {
+    margin: 10px 0px 0px 5px;
+  }
+}

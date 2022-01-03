@@ -1,0 +1,30 @@
+@import '../../style/variables';
+
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: $sidebar-grey;
+  width: 60px;
+  height: 100vh;
+  > hr {
+    width: 100%;
+    border: 1px solid #3b3e3b;
+    margin: 0;
+  }
+  > svg {
+    color: $sidebar-icon;
+    margin: 1rem auto;
+    &:hover {
+      color: $white-100;
+      cursor: pointer;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .sidebar-container {
+    width: 40px;
+  }
+}

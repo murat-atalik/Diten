@@ -1,0 +1,156 @@
+@import '../../style/variables';
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 5px 40px 0px 0px;
+
+  &-search-input {
+    margin-top: 5px;
+    position: relative;
+    width: 300px;
+
+    > input {
+      padding: 8px 30px 8px 8px;
+      height: 38px;
+      width: 300px;
+      border: 1px solid $grey-100;
+      border-radius: 4px;
+      color: $grey-100;
+      &:focus {
+        outline: $grey-100 solid 1px;
+        color: $grey-200;
+      }
+    }
+    > svg {
+      position: absolute;
+      top: 9px;
+      right: 10px;
+      color: $grey-100;
+    }
+  }
+  &-buttons {
+    width: 380px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    > button {
+      height: 38px;
+      &:first-child {
+        border-color: $yellow-button;
+        &:hover {
+          background-color: $yellow-button;
+          color: $white-100;
+          cursor: pointer;
+        }
+      }
+      &:not(:first-child) {
+        &:hover {
+          background-color: $grey-100;
+          color: $white-100;
+          cursor: pointer;
+        }
+      }
+      background-color: transparent;
+      color: $grey-200;
+      border: 1px solid $grey-100;
+      padding: 8px;
+      border-radius: 4px;
+    }
+    .dummy-button {
+      > button {
+        &:first-child {
+          border-radius: 4px 0 0 4px;
+          background-color: $blue-button;
+          color: $white-100;
+          border-color: $blue-button;
+          &:hover {
+            background-color: $white-100;
+            color: $blue-button;
+            cursor: pointer;
+          }
+        }
+        &:last-child {
+          border-radius: 0 4px 4px 0;
+        }
+        background-color: transparent;
+        color: $grey-200;
+        border: 1px solid $grey-100;
+        padding: 8px;
+        &:hover {
+          background-color: $grey-100;
+          color: $white-100;
+          cursor: pointer;
+        }
+      }
+    }
+    .filter-button-on {
+      margin-top: 5px;
+      color: $white-100;
+      background-color: $grey-200;
+      border-color: $grey-200;
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      &:hover {
+        background-color: $white-100 !important;
+        color: $grey-200 !important;
+        cursor: pointer;
+      }
+      > p {
+        margin-right: 5px;
+      }
+    }
+    .filter-button-off {
+      margin-top: 5px;
+      color: $grey-200;
+      background-color: $white-100;
+      border-color: $grey-200;
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      &:hover {
+        background-color: $grey-200 !important;
+        color: $white-100;
+        cursor: pointer;
+      }
+      > p {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .search-bar-search-input {
+    width: 100%;
+    > input {
+      width: 100%;
+    }
+  }
+  .search-bar-buttons {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .search-bar {
+    margin: 5px 0px 0px 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search-bar-search-input {
+    width: 100%;
+    > input {
+      width: 100%;
+    }
+  }
+}
