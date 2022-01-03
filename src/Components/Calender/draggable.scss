@@ -13,12 +13,12 @@
 }
 .day-list-sidebar-closed {
   > div {
-    width: calc((100vw - 160px) / 12);
+    width: calc((100vw - 135px) / 12);
   }
 }
 .day-list-sidebar-open {
   > div {
-    width: calc((100vw - 220px) / 12);
+    width: calc((100vw - 195px) / 12);
   }
 }
 .day-colored-blue {
@@ -39,15 +39,15 @@
   margin: 1px;
 }
 @media screen and (max-width: 550px) {
-  .day-list-sidebar-open {
-    > li {
-      width: calc((100vw - 170px) / 12);
+  .day-list-sidebar-closed {
+    > div {
+      width: calc((100vw - 105px) / 12);
       height: 20px;
     }
   }
-  .day-list-sidebar-closed {
-    > li {
-      width: calc((100vw - 125px) / 12);
+  .day-list-sidebar-open {
+    > div {
+      width: calc((100vw - 150px) / 12);
       height: 20px;
     }
   }
